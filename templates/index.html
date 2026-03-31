@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Campaign Manager — Accueil{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+  <div class="dashboard-hero">
+    <h1 data-fr="Bienvenue, Maître du Jeu" data-en="Welcome, Game Master">Bienvenue, Maître du Jeu</h1>
+    <p data-fr="Votre outil de table pour Pathfinder 2e Remaster."
+       data-en="Your table tool for Pathfinder 2e Remaster.">
+      Votre outil de table pour Pathfinder 2e Remaster.
+    </p>
+  </div>
+
+  <div class="stat-grid">
+    <a href="/grimoire?tab=spells" class="stat-card">
+      <div class="stat-number">{{ stats.spells }}</div>
+      <div class="stat-label" data-fr="Sorts" data-en="Spells">Sorts</div>
+    </a>
+    <a href="/bestiary" class="stat-card">
+      <div class="stat-number">{{ stats.creatures }}</div>
+      <div class="stat-label" data-fr="Créatures" data-en="Creatures">Créatures</div>
+    </a>
+    <a href="/grimoire?tab=feats" class="stat-card">
+      <div class="stat-number">{{ stats.feats }}</div>
+      <div class="stat-label" data-fr="Dons" data-en="Feats">Dons</div>
+    </a>
+    <a href="/grimoire?tab=items" class="stat-card">
+      <div class="stat-number">{{ stats['items'] }}</div>
+      <div class="stat-label" data-fr="Objets" data-en="Items">Objets</div>
+    </a>
+    <a href="/grimoire?tab=conditions" class="stat-card">
+      <div class="stat-number">{{ stats.conditions }}</div>
+      <div class="stat-label" data-fr="Conditions" data-en="Conditions">Conditions</div>
+    </a>
+  </div>
+
+  <div class="quick-links">
+    <h2 data-fr="Accès rapide" data-en="Quick Access">Accès rapide</h2>
+    <div class="link-row">
+      <a href="/grimoire?tab=spells" class="quick-btn">
+        <span data-fr="Chercher un sort" data-en="Search a spell">Chercher un sort</span>
+      </a>
+      <a href="/bestiary" class="quick-btn">
+        <span data-fr="Chercher une créature" data-en="Search a creature">Chercher une créature</span>
+      </a>
+      <a href="/grimoire?tab=conditions" class="quick-btn">
+        <span data-fr="Voir les conditions" data-en="View conditions">Voir les conditions</span>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

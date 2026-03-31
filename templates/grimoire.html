@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %}Grimoire — Campaign Manager{% endblock %}
+
+{% block content %}
+<div class="grimoire">
+
+  <!-- Tab bar -->
+  <div class="tab-bar">
+    <a href="/grimoire?tab=spells"
+       class="tab {% if tab == 'spells' %}active{% endif %}">
+      <span data-fr="Sorts" data-en="Spells">Sorts</span>
+    </a>
+    <a href="/grimoire?tab=feats"
+       class="tab {% if tab == 'feats' %}active{% endif %}">
+      <span data-fr="Dons" data-en="Feats">Dons</span>
+    </a>
+    <a href="/grimoire?tab=items"
+       class="tab {% if tab == 'items' %}active{% endif %}">
+      <span data-fr="Objets" data-en="Items">Objets</span>
+    </a>
+    <a href="/grimoire?tab=conditions"
+       class="tab {% if tab == 'conditions' %}active{% endif %}">
+      <span data-fr="Conditions" data-en="Conditions">Conditions</span>
+    </a>
+  </div>
+
+  <!-- ── Spells ─────────────────────────────────────────────────────────── -->
+  {% if tab == 'spells' %}
+  <div class="filter-bar">
+    <input id="search" type="search" class="search-box"
+           placeholder="Fireball, heal, charm…" autocomplete="off">
+    <select id="filterLevel" class="filter-select">
+      <option value="" data-fr="Tous niveaux" data-en="All levels">Tous niveaux</option>
+      {% for n in range(1, 11) %}
+      <option value="{{ n }}">Niveau {{ n }}</option>
+      {% endfor %}
+      <option value="0" data-fr="Cantrip" data-en="Cantrip">Cantrip (0)</option>
+    </select>
+    <select id="filterTradition" class="filter-select">
+      <option value="" data-fr="Toutes traditions" data-en="All traditions">Toutes traditions</option>
+      <option value="arcane">Arcane</option>
+      <option value="divine">Divine</option>
+      <option value="occult">Occult</option>
+      <option value="primal">Primal</option>
+    </select>
+    <select id="filterType" class="filter-select">
+      <option value="" data-fr="Tout type" data-en="All types">Tout type</option>
+      <option value="spell" data-fr="Sort" data-en="Spell">Sort</option>
+      <option value="focus" data-fr="Sort de focus" data-en="Focus spell">Sort de focus</option>
+    </select>
+  </div>
+  <div id="results" class="entry-list"></div>
+
+  <!-- ── Feats ──────────────────────────────────────────────────────────── -->
+  {% elif tab == 'feats' %}
+  <div class="filter-bar">
+    <input id="search" type="search" class="search-box"
+           placeholder="Power Attack, Sudden Charge…" autocomplete="off">
+    <select id="filterLevel" class="filter-select">
+      <option value="" data-fr="Tous niveaux" data-en="All levels">Tous niveaux</option>
+      {% for n in range(1, 21) %}
+      <option value="{{ n }}">Niveau {{ n }}</option>
+      {% endfor %}
+    </select>
+    <select id="filterClass" class="filter-select">
+      <option value="" data-fr="Toutes classes" data-en="All classes">Toutes classes</option>
+      {% for cls in ['Fighter','Rogue','Wizard','Cleric','Druid','Ranger','Bard','Champion',
+                     'Monk','Barbarian','Sorcerer','Oracle','Witch','Alchemist',
+                     'Investigator','Swashbuckler','Summoner','Magus','Psychic',
+                     'Gunslinger','Inventor','Thaumaturge','General','Archetype'] %}
+      <option value="{{ cls }}">{{ cls }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div id="results" class="entry-list"></div>
+
+  <!-- ── Items ──────────────────────────────────────────────────────────── -->
+  {% elif tab == 'items' %}
+  <div class="filter-bar">
+    <input id="search" type="search" class="search-box"
+           placeholder="Cloak of Elvenkind, Wand…" autocomplete="off">
+    <select id="filterLevel" class="filter-select">
+      <option value="" data-fr="Tous niveaux" data-en="All levels">Tous niveaux</option>
+      {% for n in range(1, 21) %}
+      <option value="{{ n }}">Niveau {{ n }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div id="results" class="entry-list"></div>
+
+  <!-- ── Conditions ─────────────────────────────────────────────────────── -->
+  {% elif tab == 'conditions' %}
+  <div class="conditions-grid">
+    {% for c in conditions %}
+    <div class="condition-card">
+      <div class="condition-name">
+        {{ c.name }}
+        {% if c.has_value %}<span class="condition-value-badge">N</span>{% endif %}
+      </div>
+      <div class="condition-desc">{{ c.description }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/grimoire.js"></script>
+{% if tab == 'spells' %}
+<script>initSearch('spells', ['filterLevel','filterTradition','filterType'], ['level','tradition','type'], renderSpell);</script>
+{% elif tab == 'feats' %}
+<script>initSearch('feats', ['filterLevel','filterClass'], ['level','class'], renderFeat);</script>
+{% elif tab == 'items' %}
+<script>initSearch('items', ['filterLevel'], ['level'], renderItem);</script>
+{% endif %}
+{% endblock %}

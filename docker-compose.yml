@@ -1,0 +1,14 @@
+services:
+  campaign-manager:
+    build: .
+    container_name: campaign-manager
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      - cm_data:/data
+    environment:
+      - ADMIN_PASSWORD=bard1cus
+
+volumes:
+  cm_data:

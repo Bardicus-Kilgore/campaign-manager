@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Campaign Manager{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="nav-brand" href="/">
+    <span>Campaign Manager</span>
+    <span class="nav-subtitle">PF2e</span>
+  </a>
+  <div class="nav-links">
+    <a href="/grimoire" class="nav-link {% if request.url.path.startswith('/grimoire') %}active{% endif %}">
+      <span data-fr="Grimoire" data-en="Grimoire">Grimoire</span>
+    </a>
+    <a href="/bestiary" class="nav-link {% if request.url.path.startswith('/bestiary') %}active{% endif %}">
+      <span data-fr="Bestiaire" data-en="Bestiary">Bestiaire</span>
+    </a>
+    <a href="/chat" class="nav-link {% if request.url.path.startswith('/chat') %}active{% endif %}">
+      <span data-fr="Salon" data-en="Chat">Salon</span>
+    </a>
+  </div>
+  <button id="themeToggle" class="lang-btn" title="Thème">☀</button>
+  <button id="langToggle" class="lang-btn">EN</button>
+</nav>
+
+<main class="main-content">
+  {% block content %}{% endblock %}
+</main>
+
+<script src="/static/theme.js"></script>
+<script src="/static/lang.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

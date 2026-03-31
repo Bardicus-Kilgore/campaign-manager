@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Bestiaire — Campaign Manager{% endblock %}
+
+{% block content %}
+<div class="grimoire">
+
+  <div class="filter-bar">
+    <input id="search" type="search" class="search-box"
+           placeholder="Goblin, Dragon, Zombie…" autocomplete="off">
+    <select id="filterLevel" class="filter-select">
+      <option value="" data-fr="Tous niveaux" data-en="All levels">Tous niveaux</option>
+      {% for n in range(-1, 25) %}
+      <option value="{{ n }}">Niveau {{ n }}</option>
+      {% endfor %}
+    </select>
+    <select id="filterType" class="filter-select">
+      <option value="" data-fr="Tout type" data-en="All types">Tout type</option>
+      {% for t in ['Aberration','Animal','Beast','Celestial','Construct','Dragon',
+                   'Elemental','Fey','Fiend','Fungus','Giant','Humanoid',
+                   'Monitor','Ooze','Plant','Spirit','Undead'] %}
+      <option value="{{ t }}">{{ t }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div id="results" class="entry-list"></div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/grimoire.js"></script>
+<script>initSearch('creatures', ['filterLevel','filterType'], ['level','type'], renderCreature);</script>
+{% endblock %}
