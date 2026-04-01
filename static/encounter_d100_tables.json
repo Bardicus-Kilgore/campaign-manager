@@ -1,0 +1,122 @@
+{
+  "dungeon": [
+    {"min":  1, "max": 10, "name": "Undead Patrol",       "preferred_types": ["Undead"],      "strategy": "equal_group",         "notes": "Animated dead guard the passage."},
+    {"min": 11, "max": 20, "name": "Cultist Conclave",    "preferred_types": ["Humanoid"],    "strategy": "leader_plus_minions", "notes": "A robed leader directs fanatic followers."},
+    {"min": 21, "max": 30, "name": "Construct Sentinels", "preferred_types": ["Construct"],   "strategy": "equal_group",         "notes": "Mechanical guardians hold their post."},
+    {"min": 31, "max": 40, "name": "Goblin Raiders",      "preferred_types": ["Humanoid"],    "strategy": "horde",               "notes": "A noisy mob of scavengers swarms the room."},
+    {"min": 41, "max": 50, "name": "Aberrant Horror",     "preferred_types": ["Aberration"],  "strategy": "solo_or_leader",      "notes": "Something deeply wrong dwells in the dark."},
+    {"min": 51, "max": 60, "name": "Undead Horde",        "preferred_types": ["Undead"],      "strategy": "horde",               "notes": "The dead rise in numbers from ancient graves."},
+    {"min": 61, "max": 70, "name": "Fiend and Thralls",   "preferred_types": ["Fiend"],       "strategy": "leader_plus_minions", "notes": "A bound devil commands its corrupted servants."},
+    {"min": 71, "max": 80, "name": "Humanoid Assassins",  "preferred_types": ["Humanoid"],    "strategy": "leader_plus_minions", "notes": "A cell of killers moves through the shadows."},
+    {"min": 81, "max": 90, "name": "Ooze Colony",         "preferred_types": ["Ooze"],        "strategy": "equal_group",         "notes": "Acidic masses pool in a flooded chamber."},
+    {"min": 91, "max":100, "name": "Undead Overlord",     "preferred_types": ["Undead"],      "strategy": "leader_plus_minions", "notes": "A powerful undead commands its lesser kin."}
+  ],
+  "wilderness": [
+    {"min":  1, "max": 10, "name": "Wolf Pack",           "preferred_types": ["Beast"],       "strategy": "horde",               "notes": "Predators hunt as a coordinated group."},
+    {"min": 11, "max": 20, "name": "Bandit Patrol",       "preferred_types": ["Humanoid"],    "strategy": "equal_group",         "notes": "Armed road agents look for easy prey."},
+    {"min": 21, "max": 30, "name": "Apex Predator",       "preferred_types": ["Beast"],       "strategy": "solo_or_leader",      "notes": "A lone monster claims this territory."},
+    {"min": 31, "max": 40, "name": "Bandit Warband",      "preferred_types": ["Humanoid"],    "strategy": "leader_plus_minions", "notes": "A captain leads a raiding party."},
+    {"min": 41, "max": 50, "name": "Beast Swarm",         "preferred_types": ["Beast"],       "strategy": "equal_group",         "notes": "Multiple creatures compete for territory."},
+    {"min": 51, "max": 60, "name": "Fey Wanderers",       "preferred_types": ["Fey"],         "strategy": "equal_group",         "notes": "Capricious spirits from a nearby crossing."},
+    {"min": 61, "max": 70, "name": "Giant and Servants",  "preferred_types": ["Giant"],       "strategy": "leader_plus_minions", "notes": "A hulking giant moves with a retinue."},
+    {"min": 71, "max": 80, "name": "Pack Hunters",        "preferred_types": ["Beast"],       "strategy": "leader_plus_minions", "notes": "An alpha leads its brood."},
+    {"min": 81, "max": 90, "name": "Elemental Surge",     "preferred_types": ["Elemental"],   "strategy": "solo_or_leader",      "notes": "Raw elemental power manifests unpredictably."},
+    {"min": 91, "max":100, "name": "Raider Warband",      "preferred_types": ["Humanoid"],    "strategy": "horde",               "notes": "A large war party moves through the region."}
+  ],
+  "urban": [
+    {"min":  1, "max": 10, "name": "Thieves Guild",        "preferred_types": ["Humanoid"],   "strategy": "leader_plus_minions", "notes": "A crime boss and enforcers operate in the district."},
+    {"min": 11, "max": 20, "name": "City Guard Patrol",    "preferred_types": ["Humanoid"],   "strategy": "equal_group",         "notes": "Armored guards on their rounds."},
+    {"min": 21, "max": 30, "name": "Undead Haunting",      "preferred_types": ["Undead"],     "strategy": "equal_group",         "notes": "The restless dead plague a building or alley."},
+    {"min": 31, "max": 40, "name": "Mob Violence",         "preferred_types": ["Humanoid"],   "strategy": "horde",               "notes": "An angry crowd turns dangerous."},
+    {"min": 41, "max": 50, "name": "Assassin Cell",        "preferred_types": ["Humanoid"],   "strategy": "leader_plus_minions", "notes": "A contract killer and handlers move to eliminate a target."},
+    {"min": 51, "max": 60, "name": "Cultist Gathering",    "preferred_types": ["Humanoid"],   "strategy": "horde",               "notes": "A dark cult assembles in secret."},
+    {"min": 61, "max": 70, "name": "Fiend Corruption",     "preferred_types": ["Fiend"],      "strategy": "solo_or_leader",      "notes": "A devil or demon operates through proxies or appears directly."},
+    {"min": 71, "max": 80, "name": "Crime Lord Enforcers", "preferred_types": ["Humanoid"],   "strategy": "leader_plus_minions", "notes": "A powerful criminal and bodyguards."},
+    {"min": 81, "max": 90, "name": "Vigilante Hunters",    "preferred_types": ["Humanoid"],   "strategy": "equal_group",         "notes": "Self-appointed protectors take the law into their own hands."},
+    {"min": 91, "max":100, "name": "Construct Uprising",   "preferred_types": ["Construct"],  "strategy": "horde",               "notes": "Magical constructs have broken their binding."}
+  ],
+  "forest": [
+    {"min":  1, "max": 10, "name": "Wolf Pack",         "preferred_types": ["Beast"],     "strategy": "horde",               "notes": "Predators hunt under the canopy."},
+    {"min": 11, "max": 20, "name": "Fey Ambush",        "preferred_types": ["Fey"],       "strategy": "leader_plus_minions", "notes": "Trickster spirits with a purpose."},
+    {"min": 21, "max": 30, "name": "Bandit Camp",       "preferred_types": ["Humanoid"],  "strategy": "leader_plus_minions", "notes": "Outlaws ambush from the tree line."},
+    {"min": 31, "max": 40, "name": "Awakened Plants",   "preferred_types": ["Plant"],     "strategy": "equal_group",         "notes": "The forest itself moves against intruders."},
+    {"min": 41, "max": 50, "name": "Apex Predator",     "preferred_types": ["Beast"],     "strategy": "solo_or_leader",      "notes": "One massive creature rules this stretch of forest."},
+    {"min": 51, "max": 60, "name": "Pixie Court",       "preferred_types": ["Fey"],       "strategy": "horde",               "notes": "Dozens of small fey swarm with mischief."},
+    {"min": 61, "max": 70, "name": "Treant Grove",      "preferred_types": ["Plant"],     "strategy": "leader_plus_minions", "notes": "An ancient tree and its awakened kin."},
+    {"min": 71, "max": 80, "name": "Forest Hunters",    "preferred_types": ["Humanoid"],  "strategy": "equal_group",         "notes": "Skilled trackers with a quarry."},
+    {"min": 81, "max": 90, "name": "Beast Stampede",    "preferred_types": ["Beast"],     "strategy": "horde",               "notes": "A panicked herd of dangerous creatures."},
+    {"min": 91, "max":100, "name": "Dragon in the Wood","preferred_types": ["Dragon"],    "strategy": "solo_or_leader",      "notes": "A wyrm nests nearby and claims this wood."}
+  ],
+  "swamp": [
+    {"min":  1, "max": 10, "name": "Risen Dead",         "preferred_types": ["Undead"],      "strategy": "horde",               "notes": "Bog zombies and drowned dead emerge from murky water."},
+    {"min": 11, "max": 20, "name": "Swamp Predator",     "preferred_types": ["Beast"],       "strategy": "solo_or_leader",      "notes": "A massive reptile or amphibian ambushes from water."},
+    {"min": 21, "max": 30, "name": "Tribal Raid",        "preferred_types": ["Humanoid"],    "strategy": "leader_plus_minions", "notes": "A marsh tribe defends its territory."},
+    {"min": 31, "max": 40, "name": "Plant Guardians",    "preferred_types": ["Plant"],       "strategy": "equal_group",         "notes": "Carnivorous flora animates to trap prey."},
+    {"min": 41, "max": 50, "name": "Aberrant Dweller",   "preferred_types": ["Aberration"],  "strategy": "solo_or_leader",      "notes": "Something deeply wrong lives in the depths."},
+    {"min": 51, "max": 60, "name": "Ooze Colony",        "preferred_types": ["Ooze"],        "strategy": "equal_group",         "notes": "Bubbling masses of acidic slime in stagnant pools."},
+    {"min": 61, "max": 70, "name": "Bog Undead",         "preferred_types": ["Undead"],      "strategy": "equal_group",         "notes": "Preserved dead from ancient battles walk again."},
+    {"min": 71, "max": 80, "name": "Beast Pack",         "preferred_types": ["Beast"],       "strategy": "equal_group",         "notes": "Multiple swamp predators converge."},
+    {"min": 81, "max": 90, "name": "Fey Swamp Court",   "preferred_types": ["Fey"],         "strategy": "leader_plus_minions", "notes": "A dark fey lord with bound servants."},
+    {"min": 91, "max":100, "name": "Fiend Corruption",  "preferred_types": ["Fiend"],       "strategy": "leader_plus_minions", "notes": "A lower planar entity seeps through a weak point in reality."}
+  ],
+  "mountain": [
+    {"min":  1, "max": 10, "name": "Giant Sentinels",    "preferred_types": ["Giant"],      "strategy": "equal_group",         "notes": "Giants guard a mountain pass."},
+    {"min": 11, "max": 20, "name": "Cliff Predator",     "preferred_types": ["Beast"],      "strategy": "solo_or_leader",      "notes": "A powerful creature owns this stretch of mountain."},
+    {"min": 21, "max": 30, "name": "Mountain Raiders",   "preferred_types": ["Humanoid"],   "strategy": "leader_plus_minions", "notes": "Mountain bandits or barbarians ambush travelers."},
+    {"min": 31, "max": 40, "name": "Giant Clan",         "preferred_types": ["Giant"],      "strategy": "horde",               "notes": "A full raiding party of giants descends."},
+    {"min": 41, "max": 50, "name": "Dragon Lair",        "preferred_types": ["Dragon"],     "strategy": "solo_or_leader",      "notes": "A dragon claims the peak."},
+    {"min": 51, "max": 60, "name": "Beast Pack",         "preferred_types": ["Beast"],      "strategy": "horde",               "notes": "Predators driven down from higher altitudes by hunger."},
+    {"min": 61, "max": 70, "name": "Air Elementals",     "preferred_types": ["Elemental"],  "strategy": "equal_group",         "notes": "Wind elementals rage at high altitude."},
+    {"min": 71, "max": 80, "name": "Mountain Scouts",    "preferred_types": ["Humanoid"],   "strategy": "equal_group",         "notes": "Dwarven or ranger patrols protecting the passes."},
+    {"min": 81, "max": 90, "name": "Giant Warlord",      "preferred_types": ["Giant"],      "strategy": "leader_plus_minions", "notes": "A chieftain leads elite giant warriors."},
+    {"min": 91, "max":100, "name": "Stone Guardian",     "preferred_types": ["Construct"],  "strategy": "solo_or_leader",      "notes": "An ancient magical sentinel of the peaks."}
+  ],
+  "desert": [
+    {"min":  1, "max": 10, "name": "Cursed Dead",        "preferred_types": ["Undead"],     "strategy": "equal_group",         "notes": "Preserved mummies and skeletal warriors from buried ruins."},
+    {"min": 11, "max": 20, "name": "Sand Predator",      "preferred_types": ["Beast"],      "strategy": "solo_or_leader",      "notes": "A massive creature perfectly adapted to the heat."},
+    {"min": 21, "max": 30, "name": "Raider War Party",   "preferred_types": ["Humanoid"],   "strategy": "horde",               "notes": "Nomadic raiders strike fast and retreat into the dunes."},
+    {"min": 31, "max": 40, "name": "Sand Elementals",    "preferred_types": ["Elemental"],  "strategy": "equal_group",         "notes": "Sandstorm elementals coalesce from a sudden squall."},
+    {"min": 41, "max": 50, "name": "Desert Giant",       "preferred_types": ["Giant"],      "strategy": "solo_or_leader",      "notes": "A solitary giant claiming the wasteland."},
+    {"min": 51, "max": 60, "name": "Nomad War Party",    "preferred_types": ["Humanoid"],   "strategy": "leader_plus_minions", "notes": "A tribal chief leads mounted warriors."},
+    {"min": 61, "max": 70, "name": "Buried Legion",      "preferred_types": ["Undead"],     "strategy": "horde",               "notes": "An army entombed centuries ago stirs from the sand."},
+    {"min": 71, "max": 80, "name": "Desert Nest",        "preferred_types": ["Beast"],      "strategy": "equal_group",         "notes": "Territorial creatures defend their burrow."},
+    {"min": 81, "max": 90, "name": "Fiend Manifestation","preferred_types": ["Fiend"],      "strategy": "solo_or_leader",      "notes": "A devil or demon drawn to suffering in the wastes."},
+    {"min": 91, "max":100, "name": "Desert Tyrant",      "preferred_types": ["Dragon"],     "strategy": "solo_or_leader",      "notes": "A brass or blue dragon rules the wasteland."}
+  ],
+  "arctic": [
+    {"min":  1, "max": 10, "name": "Wolf Pack",           "preferred_types": ["Beast"],      "strategy": "horde",               "notes": "Starving predators hunt in the white waste."},
+    {"min": 11, "max": 20, "name": "Ice Elementals",      "preferred_types": ["Elemental"],  "strategy": "equal_group",         "notes": "Crystallized elementals drift with the blizzard."},
+    {"min": 21, "max": 30, "name": "Frost Raiders",       "preferred_types": ["Humanoid"],   "strategy": "leader_plus_minions", "notes": "Viking-like warriors raid across the ice."},
+    {"min": 31, "max": 40, "name": "Frozen Dead",         "preferred_types": ["Undead"],     "strategy": "equal_group",         "notes": "The perfectly preserved dead animate in the eternal cold."},
+    {"min": 41, "max": 50, "name": "Frost Giant Clan",    "preferred_types": ["Giant"],      "strategy": "leader_plus_minions", "notes": "A jarl leads ice giant warriors."},
+    {"min": 51, "max": 60, "name": "Arctic Predator",     "preferred_types": ["Beast"],      "strategy": "solo_or_leader",      "notes": "A massive predator adapted to extreme cold."},
+    {"min": 61, "max": 70, "name": "Blizzard Elemental",  "preferred_types": ["Elemental"],  "strategy": "solo_or_leader",      "notes": "A massive elemental born from a killing storm."},
+    {"min": 71, "max": 80, "name": "Survivalist Patrol",  "preferred_types": ["Humanoid"],   "strategy": "equal_group",         "notes": "Hardened rangers or scouts on a mission."},
+    {"min": 81, "max": 90, "name": "Frost Wyrm",          "preferred_types": ["Dragon"],     "strategy": "solo_or_leader",      "notes": "A white dragon hunts across the tundra."},
+    {"min": 91, "max":100, "name": "Ancient Guardian",    "preferred_types": ["Construct"],  "strategy": "solo_or_leader",      "notes": "A mechanical sentinel preserved in permafrost."}
+  ],
+  "underwater": [
+    {"min":  1, "max": 10, "name": "Sea Beast Pack",     "preferred_types": ["Beast"],      "strategy": "equal_group",         "notes": "Sharks or sea serpents converge on prey."},
+    {"min": 11, "max": 20, "name": "Deep One",           "preferred_types": ["Aberration"], "strategy": "solo_or_leader",      "notes": "An entity from the abyssal depths rises."},
+    {"min": 21, "max": 30, "name": "Sea Raiders",        "preferred_types": ["Humanoid"],   "strategy": "leader_plus_minions", "notes": "Aquatic humanoids defend their domain."},
+    {"min": 31, "max": 40, "name": "Beast Swarm",        "preferred_types": ["Beast"],      "strategy": "horde",               "notes": "A school of dangerous creatures."},
+    {"min": 41, "max": 50, "name": "Water Elementals",   "preferred_types": ["Elemental"],  "strategy": "equal_group",         "notes": "Currents given violent form."},
+    {"min": 51, "max": 60, "name": "Abyssal Horror",     "preferred_types": ["Aberration"], "strategy": "leader_plus_minions", "notes": "A tentacled thing commands lesser servants."},
+    {"min": 61, "max": 70, "name": "Drowned Dead",       "preferred_types": ["Undead"],     "strategy": "horde",               "notes": "Sailors claimed by the sea rise again."},
+    {"min": 71, "max": 80, "name": "Apex Predator",      "preferred_types": ["Beast"],      "strategy": "solo_or_leader",      "notes": "The largest thing in these waters."},
+    {"min": 81, "max": 90, "name": "Sea Dragon",         "preferred_types": ["Dragon"],     "strategy": "solo_or_leader",      "notes": "A dragon turtle or sea wyrm."},
+    {"min": 91, "max":100, "name": "Abyssal Fiend",      "preferred_types": ["Fiend"],      "strategy": "solo_or_leader",      "notes": "A demon from the drowned planes."}
+  ],
+  "planar": [
+    {"min":  1, "max": 10, "name": "Fiend Patrol",        "preferred_types": ["Fiend"],      "strategy": "equal_group",         "notes": "Devils or demons on planar assignment."},
+    {"min": 11, "max": 20, "name": "Elemental Manifestation","preferred_types": ["Elemental"],"strategy": "leader_plus_minions","notes": "A dominant elemental with lesser kin."},
+    {"min": 21, "max": 30, "name": "Fiend Horde",         "preferred_types": ["Fiend"],      "strategy": "horde",               "notes": "An army of lesser demons or devils sweeps through."},
+    {"min": 31, "max": 40, "name": "Planar Sentinels",    "preferred_types": ["Construct"],  "strategy": "equal_group",         "notes": "Ancient magical guardians of a planar threshold."},
+    {"min": 41, "max": 50, "name": "Phase Aberration",    "preferred_types": ["Aberration"], "strategy": "solo_or_leader",      "notes": "A creature that exists partially in multiple planes."},
+    {"min": 51, "max": 60, "name": "Fiend Lord",          "preferred_types": ["Fiend"],      "strategy": "leader_plus_minions", "notes": "A powerful devil commands its minions."},
+    {"min": 61, "max": 70, "name": "Elemental Storm",     "preferred_types": ["Elemental"],  "strategy": "horde",               "notes": "Raw planar energy given myriad forms."},
+    {"min": 71, "max": 80, "name": "Planar Travelers",    "preferred_types": ["Humanoid"],   "strategy": "leader_plus_minions", "notes": "Adventurers or scholars from another plane."},
+    {"min": 81, "max": 90, "name": "Planar Ghosts",       "preferred_types": ["Undead"],     "strategy": "equal_group",         "notes": "Spirits bound to this plane by unfinished business."},
+    {"min": 91, "max":100, "name": "Planar Tyrant",       "preferred_types": ["Dragon"],     "strategy": "solo_or_leader",      "notes": "A powerful dragon that has claimed a planar domain."}
+  ]
+}

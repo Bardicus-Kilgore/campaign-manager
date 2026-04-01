@@ -1,0 +1,2140 @@
+[
+  {
+    "name": "Standard Encounter",
+    "treasure_per_encounter_level": {
+      "1": {
+        "currency": {
+          "gp": 15
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "1-1",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "2": {
+        "currency": {
+          "gp": 25
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "1-2",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "3": {
+        "currency": {
+          "gp": 40
+        },
+        "permanent_items": [
+          {
+            "level_range": "1-2",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "1-3",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "4": {
+        "currency": {
+          "gp": 65
+        },
+        "permanent_items": [
+          {
+            "level_range": "2-3",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "2-4",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "5": {
+        "currency": {
+          "gp": 100
+        },
+        "permanent_items": [
+          {
+            "level_range": "3-4",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "3-5",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "6": {
+        "currency": {
+          "gp": 150
+        },
+        "permanent_items": [
+          {
+            "level_range": "4-5",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "4-6",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "4-6",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "7": {
+        "currency": {
+          "gp": 220
+        },
+        "permanent_items": [
+          {
+            "level_range": "5-6",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "5-7",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "5-7",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "8": {
+        "currency": {
+          "gp": 320
+        },
+        "permanent_items": [
+          {
+            "level_range": "6-7",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "6-8",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "6-8",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "9": {
+        "currency": {
+          "gp": 450
+        },
+        "permanent_items": [
+          {
+            "level_range": "7-8",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "7-9",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "7-9",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "10": {
+        "currency": {
+          "gp": 650
+        },
+        "permanent_items": [
+          {
+            "level_range": "8-9",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "8-10",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "8-10",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "11": {
+        "currency": {
+          "gp": 900
+        },
+        "permanent_items": [
+          {
+            "level_range": "9-10",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "9-11",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "9-11",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "12": {
+        "currency": {
+          "gp": 1300
+        },
+        "permanent_items": [
+          {
+            "level_range": "10-11",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "9-10",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "10-12",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "10-12",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "13": {
+        "currency": {
+          "gp": 1800
+        },
+        "permanent_items": [
+          {
+            "level_range": "11-12",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "10-11",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "11-13",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "11-13",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "14": {
+        "currency": {
+          "gp": 2500
+        },
+        "permanent_items": [
+          {
+            "level_range": "12-13",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "11-12",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "12-14",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "12-14",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "15": {
+        "currency": {
+          "gp": 3500
+        },
+        "permanent_items": [
+          {
+            "level_range": "13-14",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "12-13",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "13-15",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "13-15",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "16": {
+        "currency": {
+          "gp": 5000
+        },
+        "permanent_items": [
+          {
+            "level_range": "14-15",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "13-14",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "14-15",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "14-16",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "14-16",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "17": {
+        "currency": {
+          "gp": 7000
+        },
+        "permanent_items": [
+          {
+            "level_range": "15-16",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "14-15",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "15-16",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "15-17",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "15-17",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "18": {
+        "currency": {
+          "gp": 10000
+        },
+        "permanent_items": [
+          {
+            "level_range": "16-17",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "15-16",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "16-17",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "16-18",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "16-18",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "19": {
+        "currency": {
+          "gp": 14000
+        },
+        "permanent_items": [
+          {
+            "level_range": "17-18",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "16-17",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "17-18",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "17-19",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "17-19",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "20": {
+        "currency": {
+          "gp": 20000
+        },
+        "permanent_items": [
+          {
+            "level_range": "18-19",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "17-18",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "18-19",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "18-20",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "18-20",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Boss Encounter",
+    "treasure_per_encounter_level": {
+      "1": {
+        "currency": {
+          "gp": 33
+        },
+        "permanent_items": [
+          {
+            "level_range": "1-1",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "1-1",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "1-1",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "1-1",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "2": {
+        "currency": {
+          "gp": 55
+        },
+        "permanent_items": [
+          {
+            "level_range": "1-2",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "1-1",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "1-2",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "1-2",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "3": {
+        "currency": {
+          "gp": 88
+        },
+        "permanent_items": [
+          {
+            "level_range": "2-3",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "1-2",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "1-3",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "2-3",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "4": {
+        "currency": {
+          "gp": 143
+        },
+        "permanent_items": [
+          {
+            "level_range": "3-4",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "2-3",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "2-4",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "3-4",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "5": {
+        "currency": {
+          "gp": 220
+        },
+        "permanent_items": [
+          {
+            "level_range": "4-5",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "3-4",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "3-5",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "4-5",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "6": {
+        "currency": {
+          "gp": 330
+        },
+        "permanent_items": [
+          {
+            "level_range": "5-6",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "4-5",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "4-6",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "5-6",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "7": {
+        "currency": {
+          "gp": 484
+        },
+        "permanent_items": [
+          {
+            "level_range": "6-7",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "5-6",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "5-7",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "6-7",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "8": {
+        "currency": {
+          "gp": 704
+        },
+        "permanent_items": [
+          {
+            "level_range": "7-8",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "6-7",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "6-8",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "7-8",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "9": {
+        "currency": {
+          "gp": 990
+        },
+        "permanent_items": [
+          {
+            "level_range": "8-9",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "7-8",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "7-9",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "8-9",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "10": {
+        "currency": {
+          "gp": 1430
+        },
+        "permanent_items": [
+          {
+            "level_range": "9-10",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "8-9",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "10-11",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "8-10",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "9-10",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "11": {
+        "currency": {
+          "gp": 1980
+        },
+        "permanent_items": [
+          {
+            "level_range": "10-11",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "9-10",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "11-12",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "9-11",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "10-11",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "12": {
+        "currency": {
+          "gp": 2860
+        },
+        "permanent_items": [
+          {
+            "level_range": "11-12",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "10-11",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "12-13",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "10-12",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "11-12",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "13": {
+        "currency": {
+          "gp": 3960
+        },
+        "permanent_items": [
+          {
+            "level_range": "12-13",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "11-12",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "13-14",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "11-13",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "12-13",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "14": {
+        "currency": {
+          "gp": 5500
+        },
+        "permanent_items": [
+          {
+            "level_range": "13-14",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "12-13",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "14-15",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "12-14",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "13-14",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "15": {
+        "currency": {
+          "gp": 7700
+        },
+        "permanent_items": [
+          {
+            "level_range": "14-15",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "13-14",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "15-16",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "13-15",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "14-15",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "16": {
+        "currency": {
+          "gp": 11000
+        },
+        "permanent_items": [
+          {
+            "level_range": "15-16",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "14-15",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "16-17",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "14-16",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "15-16",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "17": {
+        "currency": {
+          "gp": 15400
+        },
+        "permanent_items": [
+          {
+            "level_range": "16-17",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "15-16",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "17-18",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "15-17",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "16-17",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "18": {
+        "currency": {
+          "gp": 22000
+        },
+        "permanent_items": [
+          {
+            "level_range": "17-18",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "16-17",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "18-19",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "16-18",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "17-18",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "19": {
+        "currency": {
+          "gp": 30800
+        },
+        "permanent_items": [
+          {
+            "level_range": "18-19",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "17-18",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "19-20",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "17-19",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "18-19",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "20": {
+        "currency": {
+          "gp": 44000
+        },
+        "permanent_items": [
+          {
+            "level_range": "19-20",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "18-19",
+            "rarity": "common",
+            "count": 1
+          },
+          {
+            "level_range": "20-21",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "18-20",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "19-20",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Poor Encounter",
+    "treasure_per_encounter_level": {
+      "1": {
+        "currency": {
+          "gp": 5
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "1-1",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "2": {
+        "currency": {
+          "gp": 8
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "1-1",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "3": {
+        "currency": {
+          "gp": 14
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "1-2",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "4": {
+        "currency": {
+          "gp": 22
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "1-3",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "5": {
+        "currency": {
+          "gp": 35
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "2-4",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "6": {
+        "currency": {
+          "gp": 52
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "3-5",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "7": {
+        "currency": {
+          "gp": 77
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "4-6",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "8": {
+        "currency": {
+          "gp": 112
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "5-7",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "9": {
+        "currency": {
+          "gp": 157
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "6-8",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "10": {
+        "currency": {
+          "gp": 227
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "7-9",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "11": {
+        "currency": {
+          "gp": 315
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "8-10",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "12": {
+        "currency": {
+          "gp": 454
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "9-11",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "13": {
+        "currency": {
+          "gp": 630
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "10-12",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "14": {
+        "currency": {
+          "gp": 875
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "11-13",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "15": {
+        "currency": {
+          "gp": 1225
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "12-14",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "16": {
+        "currency": {
+          "gp": 1750
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "13-15",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "17": {
+        "currency": {
+          "gp": 2450
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "14-16",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "18": {
+        "currency": {
+          "gp": 3500
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "15-17",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "19": {
+        "currency": {
+          "gp": 4900
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "16-18",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      },
+      "20": {
+        "currency": {
+          "gp": 7000
+        },
+        "permanent_items": [],
+        "consumable_items": [
+          {
+            "level_range": "17-19",
+            "rarity": "common",
+            "count": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Rich Encounter",
+    "treasure_per_encounter_level": {
+      "1": {
+        "currency": {
+          "gp": 24
+        },
+        "permanent_items": [
+          {
+            "level_range": "1-1",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "1-1",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "1-1",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "2": {
+        "currency": {
+          "gp": 40
+        },
+        "permanent_items": [
+          {
+            "level_range": "1-2",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "1-2",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "1-2",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "3": {
+        "currency": {
+          "gp": 64
+        },
+        "permanent_items": [
+          {
+            "level_range": "2-3",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "1-3",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "2-3",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "4": {
+        "currency": {
+          "gp": 104
+        },
+        "permanent_items": [
+          {
+            "level_range": "3-4",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "2-4",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "3-4",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "5": {
+        "currency": {
+          "gp": 160
+        },
+        "permanent_items": [
+          {
+            "level_range": "4-5",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "3-5",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "4-5",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "6": {
+        "currency": {
+          "gp": 240
+        },
+        "permanent_items": [
+          {
+            "level_range": "5-6",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "4-6",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "5-6",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "7": {
+        "currency": {
+          "gp": 352
+        },
+        "permanent_items": [
+          {
+            "level_range": "6-7",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "5-7",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "6-7",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "8": {
+        "currency": {
+          "gp": 512
+        },
+        "permanent_items": [
+          {
+            "level_range": "7-8",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "6-7",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "6-8",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "7-8",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "9": {
+        "currency": {
+          "gp": 720
+        },
+        "permanent_items": [
+          {
+            "level_range": "8-9",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "7-8",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "7-9",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "8-9",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "10": {
+        "currency": {
+          "gp": 1040
+        },
+        "permanent_items": [
+          {
+            "level_range": "9-10",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "8-9",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "8-10",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "9-10",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "11": {
+        "currency": {
+          "gp": 1440
+        },
+        "permanent_items": [
+          {
+            "level_range": "10-11",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "9-10",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "9-11",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "10-11",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "12": {
+        "currency": {
+          "gp": 2080
+        },
+        "permanent_items": [
+          {
+            "level_range": "11-12",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "10-11",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "10-12",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "11-12",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "13": {
+        "currency": {
+          "gp": 2880
+        },
+        "permanent_items": [
+          {
+            "level_range": "12-13",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "11-12",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "11-13",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "12-13",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "14": {
+        "currency": {
+          "gp": 4000
+        },
+        "permanent_items": [
+          {
+            "level_range": "13-14",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "12-13",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "13-14",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "12-14",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "13-14",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "15": {
+        "currency": {
+          "gp": 5600
+        },
+        "permanent_items": [
+          {
+            "level_range": "14-15",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "13-14",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "14-15",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "13-15",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "14-15",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "16": {
+        "currency": {
+          "gp": 8000
+        },
+        "permanent_items": [
+          {
+            "level_range": "15-16",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "14-15",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "15-16",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "14-16",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "15-16",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "17": {
+        "currency": {
+          "gp": 11200
+        },
+        "permanent_items": [
+          {
+            "level_range": "16-17",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "15-16",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "16-17",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "15-17",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "16-17",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "18": {
+        "currency": {
+          "gp": 16000
+        },
+        "permanent_items": [
+          {
+            "level_range": "17-18",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "16-17",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "17-18",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "16-18",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "17-18",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "19": {
+        "currency": {
+          "gp": 22400
+        },
+        "permanent_items": [
+          {
+            "level_range": "18-19",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "17-18",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "18-19",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "17-19",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "18-19",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "20": {
+        "currency": {
+          "gp": 32000
+        },
+        "permanent_items": [
+          {
+            "level_range": "19-20",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "18-19",
+            "rarity": "uncommon",
+            "count": 1
+          },
+          {
+            "level_range": "19-20",
+            "rarity": "rare",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "18-20",
+            "rarity": "common",
+            "count": 2
+          },
+          {
+            "level_range": "19-20",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "Hoard Discovery",
+    "treasure_per_encounter_level": {
+      "1": {
+        "currency": {
+          "gp": 80
+        },
+        "permanent_items": [
+          {
+            "level_range": "1-2",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "1-2",
+            "rarity": "common",
+            "count": 3
+          }
+        ]
+      },
+      "5": {
+        "currency": {
+          "gp": 600
+        },
+        "permanent_items": [
+          {
+            "level_range": "4-5",
+            "rarity": "uncommon",
+            "count": 2
+          },
+          {
+            "level_range": "3-4",
+            "rarity": "common",
+            "count": 1
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "3-5",
+            "rarity": "common",
+            "count": 3
+          },
+          {
+            "level_range": "4-5",
+            "rarity": "uncommon",
+            "count": 1
+          }
+        ]
+      },
+      "10": {
+        "currency": {
+          "gp": 5000
+        },
+        "permanent_items": [
+          {
+            "level_range": "9-10",
+            "rarity": "rare",
+            "count": 1
+          },
+          {
+            "level_range": "8-9",
+            "rarity": "uncommon",
+            "count": 2
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "7-10",
+            "rarity": "uncommon",
+            "count": 4
+          }
+        ]
+      },
+      "15": {
+        "currency": {
+          "gp": 28000
+        },
+        "permanent_items": [
+          {
+            "level_range": "14-15",
+            "rarity": "rare",
+            "count": 2
+          },
+          {
+            "level_range": "13-14",
+            "rarity": "uncommon",
+            "count": 2
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "12-15",
+            "rarity": "uncommon",
+            "count": 4
+          }
+        ]
+      },
+      "20": {
+        "currency": {
+          "gp": 120000
+        },
+        "permanent_items": [
+          {
+            "level_range": "19-20",
+            "rarity": "rare",
+            "count": 3
+          },
+          {
+            "level_range": "17-18",
+            "rarity": "uncommon",
+            "count": 2
+          }
+        ],
+        "consumable_items": [
+          {
+            "level_range": "17-20",
+            "rarity": "rare",
+            "count": 2
+          },
+          {
+            "level_range": "15-18",
+            "rarity": "uncommon",
+            "count": 3
+          }
+        ]
+      }
+    }
+  }
+]

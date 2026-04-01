@@ -9,10 +9,13 @@ wheels/
 # Virtual environments
 .venv
 
-# Copyrighted source material
+# Raw source material — not distributed (PDFs, raw text dumps)
 books/
 extraction/raw/
+extraction/extracted/
 
-# Database (seeded at runtime via Docker)
-pf2e.db
-data/
+# Local dev DB (not committed — use pf2e.db at project root for the seed)
+/data/
+
+# Uploads and user data
+uploads/

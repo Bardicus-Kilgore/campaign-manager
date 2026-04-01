@@ -1,0 +1,312 @@
+{% extends "base.html" %}
+{% block title %}Encounter Builder — Campaign Manager{% endblock %}
+
+{% block content %}
+<div class="encounter-page">
+
+  <!-- ── Tabs ── -->
+  <div class="enc-tabs">
+    <button class="enc-tab active" data-tab="builder"
+            data-fr="Constructeur" data-en="Builder">Constructeur</button>
+    <button class="enc-tab" data-tab="browser"
+            data-fr="Bibliothèque" data-en="Browse">Bibliothèque</button>
+    <button class="enc-tab" data-tab="loot"
+            data-fr="Butin" data-en="Loot">Butin</button>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       TAB 1 — ENCOUNTER BUILDER
+  ══════════════════════════════════════════════════ -->
+  <div id="tab-builder" class="enc-tab-content active">
+    <div class="builder-layout">
+
+      <!-- Left: Config -->
+      <div class="builder-config card">
+        <h2 data-fr="Configuration" data-en="Configuration">Configuration</h2>
+
+        <!-- Session selector -->
+        <label class="field-label" data-fr="Session de campagne" data-en="Campaign session">
+          Session de campagne
+        </label>
+        <div class="session-row">
+          <select id="sessionSelect" class="field-select">
+            <option value="">— Aucune session —</option>
+          </select>
+          <button class="btn-ghost btn-sm" id="btnNewSession" title="Nouvelle session">+</button>
+          <button class="btn-ghost btn-sm btn-danger-ghost" id="btnDeleteSession" title="Supprimer" style="display:none">✕</button>
+        </div>
+
+        <!-- Campaign arc -->
+        <label class="field-label" data-fr="Arc de campagne" data-en="Campaign arc">Arc de campagne</label>
+        <select id="encArc" class="field-select">
+          <option value="custom">Custom (No bias)</option>
+          <option value="dungeon_delve">Dungeon Delve</option>
+          <option value="cult_activity">Cult Activity</option>
+          <option value="undead_siege">Undead Siege</option>
+          <option value="political_intrigue">Political Intrigue</option>
+          <option value="wilderness_expedition">Wilderness Expedition</option>
+          <option value="planar_threat">Planar Threat</option>
+          <option value="ancient_mystery">Ancient Mystery</option>
+        </select>
+
+        <label class="field-label" data-fr="Nom de la rencontre" data-en="Encounter name">
+          Nom de la rencontre
+        </label>
+        <input id="encName" type="text" class="field-input"
+               placeholder="Trône de Wrin…" autocomplete="off">
+
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" data-fr="Niveau du groupe" data-en="Party level">
+              Niveau du groupe
+            </label>
+            <input id="partyLevel" type="number" class="field-input" value="1" min="1" max="20">
+          </div>
+          <div class="field-group">
+            <label class="field-label" data-fr="Taille du groupe" data-en="Party size">
+              Taille du groupe
+            </label>
+            <input id="partySize" type="number" class="field-input" value="4" min="1" max="8">
+          </div>
+        </div>
+
+        <label class="field-label" data-fr="Difficulté" data-en="Difficulty">Difficulté</label>
+        <div class="difficulty-bar" id="difficultyBar">
+          <button class="diff-btn" data-value="trivial">Trivial</button>
+          <button class="diff-btn" data-value="low">Low</button>
+          <button class="diff-btn active" data-value="moderate">Moderate</button>
+          <button class="diff-btn" data-value="severe">Severe</button>
+          <button class="diff-btn" data-value="extreme">Extreme</button>
+        </div>
+
+        <label class="field-label" data-fr="Type de rencontre" data-en="Encounter type">
+          Type de rencontre
+        </label>
+        <select id="encType" class="field-select">
+          <option value="combat">Combat</option>
+          <option value="ambush">Ambush</option>
+          <option value="boss">Boss</option>
+          <option value="patrol">Patrol</option>
+          <option value="guard_post">Guard Post</option>
+          <option value="trap_heavy">Trap-Heavy</option>
+          <option value="siege">Siege</option>
+          <option value="social">Social</option>
+        </select>
+
+        <label class="field-label" data-fr="Environnement" data-en="Environment">
+          Environnement
+        </label>
+        <select id="encEnv" class="field-select">
+          <option value="dungeon">Dungeon</option>
+          <option value="wilderness">Wilderness</option>
+          <option value="urban">Urban</option>
+          <option value="forest">Forest</option>
+          <option value="swamp">Swamp</option>
+          <option value="mountain">Mountain</option>
+          <option value="desert">Desert</option>
+          <option value="arctic">Arctic</option>
+          <option value="underwater">Underwater</option>
+          <option value="planar">Planar</option>
+        </select>
+
+        <label class="field-label" data-fr="Terrain" data-en="Terrain">
+          Terrain <span class="field-hint">(optionnel)</span>
+        </label>
+        <select id="encTerrain" class="field-select">
+          <option value="">— aucun —</option>
+        </select>
+
+        <label class="field-label" data-fr="Notes / Tactiques" data-en="Notes / Tactics">
+          Notes / Tactiques
+        </label>
+        <textarea id="encNotes" class="field-textarea" rows="3"
+                  placeholder="Terrain difficile, renforts au tour 3…"></textarea>
+
+        <button id="btnGenerate" class="btn-primary btn-full">
+          <span data-fr="Générer la rencontre" data-en="Generate encounter">Générer la rencontre</span>
+        </button>
+      </div>
+
+      <!-- Right: Result -->
+      <div class="builder-result">
+
+        <!-- XP Meter -->
+        <div class="card xp-card" id="xpCard">
+          <div class="xp-row">
+            <span class="xp-label" data-fr="Budget XP" data-en="XP Budget">Budget XP</span>
+            <span class="xp-value" id="xpBudget">—</span>
+          </div>
+          <div class="xp-bar-wrap">
+            <div class="xp-bar" id="xpBar" style="width:0%"></div>
+          </div>
+          <div class="xp-row">
+            <span class="diff-badge" id="diffBadge">—</span>
+            <span class="xp-used" id="xpUsed">0 XP utilisés</span>
+          </div>
+        </div>
+
+        <!-- Hook (replaces tactics) -->
+        <div class="card hook-card" id="hookCard" style="display:none">
+          <div class="hook-sentence" id="hookSentence"></div>
+          <div class="hook-slots" id="hookSlots">
+            <span class="hook-slot who-slot"  id="slotWho"></span>
+            <span class="hook-sep">·</span>
+            <span class="hook-slot action-slot" id="slotAction"></span>
+            <span class="hook-sep">·</span>
+            <span class="hook-slot modifier-slot" id="slotModifier"></span>
+            <span class="hook-sep">·</span>
+            <span class="hook-slot object-slot"  id="slotObject"></span>
+          </div>
+          <p class="hook-terrain" id="hookTerrain"></p>
+        </div>
+
+        <!-- Creatures -->
+        <div class="card" id="creaturesCard" style="display:none">
+          <div class="creatures-header">
+            <h3 data-fr="Créatures" data-en="Creatures">Créatures</h3>
+            <button class="btn-ghost btn-sm" id="btnReroll"
+                    data-fr="Relancer" data-en="Reroll">Relancer</button>
+          </div>
+          <div id="creaturesList" class="creatures-list"></div>
+        </div>
+
+        <!-- Monster search -->
+        <div class="card" id="searchCard">
+          <h3 data-fr="Ajouter une créature" data-en="Add creature">Ajouter une créature</h3>
+          <div class="monster-search-bar">
+            <input id="monsterSearch" type="search" class="field-input"
+                   placeholder="Goblin, Vampire…" autocomplete="off">
+            <div class="level-shortcuts" id="levelShortcuts"></div>
+          </div>
+          <div id="monsterResults" class="monster-results"></div>
+        </div>
+
+        <!-- Actions -->
+        <div class="action-row" id="actionRow" style="display:none">
+          <button class="btn-secondary" id="btnRollLoot"
+                  data-fr="Générer le butin" data-en="Roll Loot">Générer le butin</button>
+          <button class="btn-primary" id="btnSaveEnc"
+                  data-fr="Sauvegarder" data-en="Save">Sauvegarder</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       TAB 2 — BROWSER
+  ══════════════════════════════════════════════════ -->
+  <div id="tab-browser" class="enc-tab-content">
+    <div class="browser-layout">
+
+      <div class="browser-sidebar card">
+        <h3 data-fr="Filtres" data-en="Filters">Filtres</h3>
+        <input id="browseSearch" type="search" class="field-input"
+               placeholder="Throne room, Shrine…" autocomplete="off">
+        <select id="browseAdventure" class="field-select">
+          <option value="" data-fr="Toutes les aventures" data-en="All adventures">
+            Toutes les aventures</option>
+        </select>
+        <select id="browseDiff" class="field-select">
+          <option value="">— Difficulté —</option>
+          <option value="TRIVIAL">Trivial</option>
+          <option value="LOW">Low</option>
+          <option value="MODERATE">Moderate</option>
+          <option value="SEVERE">Severe</option>
+          <option value="EXTREME">Extreme</option>
+        </select>
+        <select id="browseLevel" class="field-select">
+          <option value="">— Niveau —</option>
+          {% for n in range(1, 21) %}
+          <option value="{{ n }}">Niveau {{ n }}</option>
+          {% endfor %}
+        </select>
+        <button id="btnBrowse" class="btn-primary btn-full" style="margin-top:.5rem"
+                data-fr="Chercher" data-en="Search">Chercher</button>
+      </div>
+
+      <div class="browser-main">
+        <div id="browserResults" class="browser-results">
+          <p class="empty-state" data-fr="Lancez une recherche pour commencer."
+             data-en="Run a search to begin.">Lancez une recherche pour commencer.</p>
+        </div>
+        <div id="browserDetail" class="browser-detail" style="display:none"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       TAB 3 — LOOT
+  ══════════════════════════════════════════════════ -->
+  <div id="tab-loot" class="enc-tab-content">
+    <div class="loot-layout">
+
+      <div class="loot-config card">
+        <h2 data-fr="Générateur de butin" data-en="Loot Generator">Générateur de butin</h2>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label class="field-label" data-fr="Niveau du groupe" data-en="Party level">
+              Niveau du groupe
+            </label>
+            <input id="lootLevel" type="number" class="field-input" value="1" min="1" max="20">
+          </div>
+          <div class="field-group">
+            <label class="field-label" data-fr="Profil" data-en="Profile">Profil</label>
+            <select id="lootProfile" class="field-select">
+              <option value="standard">Standard</option>
+              <option value="poor">Poor</option>
+              <option value="rich">Rich</option>
+              <option value="boss">Boss</option>
+              <option value="hoard">Hoard</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="field-label" data-fr="Types de créatures" data-en="Creature types">
+          Types de créatures <span class="field-hint">(influence le butin)</span>
+        </label>
+        <div class="type-pills" id="typePills">
+          {% for t in ['Beast','Construct','Dragon','Elemental','Fey','Fiend',
+                       'Giant','Humanoid','Ooze','Plant','Undead'] %}
+          <button class="pill" data-value="{{ t }}">{{ t }}</button>
+          {% endfor %}
+        </div>
+
+        <label class="field-label" style="margin-top:1rem">
+          <input type="checkbox" id="lootRandomize" checked>
+          <span data-fr="Variance aléatoire" data-en="Random variance">Variance aléatoire</span>
+        </label>
+
+        <button id="btnRollLootDirect" class="btn-primary btn-full" style="margin-top:1rem">
+          <span data-fr="Générer le butin" data-en="Generate loot">Générer le butin</span>
+        </button>
+      </div>
+
+      <div class="loot-result card" id="lootResult" style="display:none">
+        <div class="loot-header">
+          <h3 id="lootProfileLabel"></h3>
+          <span class="loot-badge" id="lootBadge"></span>
+        </div>
+        <div class="loot-gold">
+          <span class="gold-icon">◈</span>
+          <span id="lootGold" class="gold-amount"></span>
+          <span id="lootGoldNote" class="gold-note"></span>
+        </div>
+        <div id="lootItems" class="loot-items"></div>
+        <details class="roll-log-details">
+          <summary data-fr="Journal des lancers" data-en="Roll log">Journal des lancers</summary>
+          <ul id="lootLog" class="roll-log"></ul>
+        </details>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/encounter.js"></script>
+{% endblock %}

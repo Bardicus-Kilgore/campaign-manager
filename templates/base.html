@@ -20,6 +20,9 @@
     <a href="/bestiary" class="nav-link {% if request.url.path.startswith('/bestiary') %}active{% endif %}">
       <span data-fr="Bestiaire" data-en="Bestiary">Bestiaire</span>
     </a>
+    <a href="/encounter" class="nav-link {% if request.url.path.startswith('/encounter') %}active{% endif %}">
+      <span data-fr="Rencontres" data-en="Encounters">Rencontres</span>
+    </a>
     <a href="/chat" class="nav-link {% if request.url.path.startswith('/chat') %}active{% endif %}">
       <span data-fr="Salon" data-en="Chat">Salon</span>
     </a>
@@ -31,6 +34,11 @@
 <main class="main-content">
   {% block content %}{% endblock %}
 </main>
+
+<footer class="legal-footer">
+  Unofficial fan tool — not affiliated with, endorsed by, or sponsored by Paizo Inc.
+  Pathfinder 2e is a trademark of Paizo Inc. Used under ORC License &amp; Community Use Policy. Not for sale.
+</footer>
 
 <script src="/static/theme.js"></script>
 <script src="/static/lang.js"></script>

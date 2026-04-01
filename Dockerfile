@@ -13,6 +13,7 @@ RUN uv sync --frozen --no-dev --python 3.12
 COPY app/        ./app/
 COPY static/     ./static/
 COPY templates/  ./templates/
+COPY engine/     ./engine/
 COPY server.py   ./
 COPY pf2e.db     ./pf2e.db.seed
 

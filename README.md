@@ -70,9 +70,17 @@ Open [http://localhost:5000](http://localhost:5000).
 
 ## Data & Content Notice
 
-This app uses game data from **Pathfinder 2e** (Paizo Inc.), available under the [Open RPG Creative (ORC) License](https://paizo.com/orclicense). No copyrighted artwork is included. The PDFs and raw extraction files are not distributed with this repository — only the parsed game data (spell names, descriptions, creature stats) derived from ORC-licensed content.
+This application uses game data from **Pathfinder Second Edition** by Paizo Inc. The game mechanics, spell names, creature stats, feat descriptions, and related rules content are used under the [Open RPG Creative (ORC) License](https://paizo.com/orclicense) and Paizo's [Community Use Policy](https://paizo.com/community/communityuse).
 
-> Not affiliated with or endorsed by Paizo Inc.
+**This project:**
+- Is a **free, non-commercial** fan tool — it is not for sale and generates no revenue
+- Does **not** include any Paizo artwork, fiction, or product identity beyond ORC-licensed rules content
+- Does **not** distribute raw PDF content or verbatim text dumps
+- Is **not** affiliated with, endorsed by, sponsored by, or officially connected to Paizo Inc. in any way
+
+Pathfinder, Pathfinder Second Edition, and the Pathfinder logo are trademarks of Paizo Inc. This fan work is published under the Community Use Policy. Paizo Inc. does not guarantee the accuracy or completeness of the content presented here.
+
+> The source PDFs are not included in this repository. The `extraction/` pipeline requires your own legally obtained copies of Pathfinder 2e sourcebooks to build the database.
 
 ---
 

@@ -96,6 +96,33 @@ def init_db():
         )
     """)
 
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS campaign_sessions (
+            id      INTEGER PRIMARY KEY AUTOINCREMENT,
+            name    TEXT    NOT NULL,
+            arc     TEXT    NOT NULL DEFAULT 'custom',
+            created DATETIME DEFAULT (datetime('now')),
+            updated DATETIME DEFAULT (datetime('now'))
+        )
+    """)
+
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS session_encounters (
+            id             INTEGER PRIMARY KEY AUTOINCREMENT,
+            session_id     INTEGER NOT NULL REFERENCES campaign_sessions(id) ON DELETE CASCADE,
+            hook           TEXT    NOT NULL DEFAULT '',
+            who            TEXT    NOT NULL DEFAULT '',
+            action         TEXT    NOT NULL DEFAULT '',
+            modifier       TEXT    NOT NULL DEFAULT '',
+            object         TEXT    NOT NULL DEFAULT '',
+            creature_types TEXT    NOT NULL DEFAULT '[]',
+            environment    TEXT    NOT NULL DEFAULT '',
+            arc            TEXT    NOT NULL DEFAULT '',
+            party_level    INTEGER NOT NULL DEFAULT 1,
+            created        DATETIME DEFAULT (datetime('now'))
+        )
+    """)
+
     conn.execute("INSERT OR IGNORE INTO rooms (id, name) VALUES ('pf2e', 'Pathfinder 2e')")
 
     conn.commit()
@@ -180,5 +207,139 @@ def search_items(q="", level=None, limit=100):
 def get_all_conditions():
     conn = get_conn()
     rows = conn.execute("SELECT * FROM conditions ORDER BY name").fetchall()
+    conn.close()
+    return [dict(r) for r in rows]
+
+
+# ── Encounter / Adventure queries ──────────────────────────────────────────────
+
+def search_encounters(q="", adventure_id=None, difficulty=None, level=None, limit=50):
+    conn = get_conn()
+    params, clauses = [], []
+    if q:
+        clauses.append("(title LIKE ? OR raw_text LIKE ?)")
+        params += [f"%{q}%", f"%{q}%"]
+    if adventure_id:
+        clauses.append("adventure_id = ?"); params.append(adventure_id)
+    if difficulty:
+        clauses.append("difficulty = ?"); params.append(difficulty.upper())
+    if level is not None:
+        clauses.append("level = ?"); params.append(int(level))
+    where = ("WHERE " + " AND ".join(clauses)) if clauses else ""
+    rows = conn.execute(
+        f"SELECT id, adventure_id, chapter_id, title, difficulty, level, raw_text "
+        f"FROM encounters {where} ORDER BY adventure_id, id LIMIT ?",
+        params + [limit]
+    ).fetchall()
+    conn.close()
+    return [dict(r) for r in rows]
+
+
+def get_encounter_by_id(enc_id: int):
+    conn = get_conn()
+    row = conn.execute("SELECT * FROM encounters WHERE id = ?", (enc_id,)).fetchone()
+    conn.close()
+    return dict(row) if row else None
+
+
+# ── Campaign sessions ──────────────────────────────────────────────────────────
+
+def get_campaign_sessions() -> list[dict]:
+    conn = get_conn()
+    rows = conn.execute(
+        "SELECT id, name, arc, created, updated FROM campaign_sessions ORDER BY updated DESC"
+    ).fetchall()
+    conn.close()
+    return [dict(r) for r in rows]
+
+
+def create_campaign_session(name: str, arc: str = "custom") -> dict:
+    conn = get_conn()
+    cur  = conn.execute(
+        "INSERT INTO campaign_sessions (name, arc) VALUES (?, ?)", (name, arc)
+    )
+    conn.commit()
+    row = conn.execute(
+        "SELECT id, name, arc, created, updated FROM campaign_sessions WHERE id = ?", (cur.lastrowid,)
+    ).fetchone()
+    conn.close()
+    return dict(row)
+
+
+def delete_campaign_session(session_id: int) -> bool:
+    conn = get_conn()
+    conn.execute("DELETE FROM campaign_sessions WHERE id = ?", (session_id,))
+    conn.commit()
+    conn.close()
+    return True
+
+
+def record_session_encounter(
+    session_id: int,
+    hook: str,
+    who: str,
+    action: str,
+    modifier: str,
+    obj: str,
+    creature_types: list[str],
+    environment: str,
+    arc: str,
+    party_level: int,
+) -> None:
+    import json as _json
+    conn = get_conn()
+    conn.execute(
+        """INSERT INTO session_encounters
+           (session_id, hook, who, action, modifier, object,
+            creature_types, environment, arc, party_level)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+        (session_id, hook, who, action, modifier, obj,
+         _json.dumps(creature_types), environment, arc, party_level)
+    )
+    conn.execute(
+        "UPDATE campaign_sessions SET updated = datetime('now') WHERE id = ?", (session_id,)
+    )
+    conn.commit()
+    conn.close()
+
+
+def get_recent_types(session_id: int, limit: int = 5) -> list[str]:
+    """Return creature types used in the last N encounters of a session."""
+    import json as _json
+    conn = get_conn()
+    rows = conn.execute(
+        """SELECT creature_types FROM session_encounters
+           WHERE session_id = ? ORDER BY created DESC LIMIT ?""",
+        (session_id, limit)
+    ).fetchall()
+    conn.close()
+    types = []
+    for row in rows:
+        try:
+            types.extend(_json.loads(row["creature_types"]))
+        except Exception:
+            pass
+    return types
+
+
+def get_session_history(session_id: int, limit: int = 20) -> list[dict]:
+    conn = get_conn()
+    rows = conn.execute(
+        """SELECT id, hook, who, action, modifier, object,
+                  creature_types, environment, arc, party_level, created
+           FROM session_encounters
+           WHERE session_id = ?
+           ORDER BY created DESC LIMIT ?""",
+        (session_id, limit)
+    ).fetchall()
+    conn.close()
+    return [dict(r) for r in rows]
+
+
+def get_all_adventures(limit=500):
+    conn = get_conn()
+    rows = conn.execute(
+        "SELECT id, title, type, system FROM adventures ORDER BY title LIMIT ?", (limit,)
+    ).fetchall()
     conn.close()
     return [dict(r) for r in rows]
